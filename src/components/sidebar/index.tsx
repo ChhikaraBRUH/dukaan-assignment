@@ -1,9 +1,8 @@
+import { icons, sidebarIcons } from "@/components/icons";
 import cn from "@/utils/cn";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-import { icons, sidebarIcons } from "../icons";
 
 export default function Sidebar() {
   return (
