@@ -1,12 +1,12 @@
 import Header from "@/components/header";
 import Overview from "@/components/overview";
 import Sidebar from "@/components/sidebar";
-import Transactions from "@/components/transactions";
+import TransactionsTable from "@/components/transactions-table";
 
 export default function Home() {
   return (
     <div className="flex w-full flex-col lg:grid lg:grid-cols-[224px_1fr]">
-      <div className="hidden lg:block lg:col-span-1">
+      <div className="hidden lg:col-span-1 lg:block">
         <Sidebar />
       </div>
 
@@ -16,7 +16,7 @@ export default function Home() {
         <div className="flex w-full flex-col gap-8 px-8">
           <Overview />
 
-          <Transactions />
+          <TransactionsTable />
         </div>
       </div>
     </div>

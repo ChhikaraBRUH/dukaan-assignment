@@ -1,7 +1,7 @@
 import { icons } from "@/components/icons";
 import { HelpCircleIcon, SearchIcon } from "lucide-react";
 
-import MobileMenu from "../sidebar/MobileMenu";
+import MobileMenu from "./sidebar/MobileMenu";
 
 export default function Header() {
   return (

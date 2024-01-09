@@ -1,5 +1,5 @@
 import { icons } from "@/components/icons";
-import Pagination from "@/components/transactions/Pagination";
+import Pagination from "@/components/transactions-table/Pagination";
 import Button, { IconButton } from "@/components/ui/Button";
 import {
   DropdownMenu,
@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/DropdownMenu";
 import { ArrowUpDownIcon, DownloadIcon, SearchIcon } from "lucide-react";
 
-export default function Transactions() {
+export default function TransactionsTable() {
   return (
     <div className="flex w-full flex-col gap-5">
       <p className="text-xl font-medium leading-7 text-[#1A181E]">
