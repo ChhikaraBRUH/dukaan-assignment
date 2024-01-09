@@ -1,6 +1,14 @@
 import { icons } from "@/components/icons";
 import Pagination from "@/components/transactions/Pagination";
 import Button, { IconButton } from "@/components/ui/Button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/DropdownMenu";
 import { ArrowUpDownIcon, DownloadIcon, SearchIcon } from "lucide-react";
 
 export default function Transactions() {
@@ -41,10 +49,7 @@ function TableContainer() {
         </div>
 
         <div className="flex flex-row items-center gap-3">
-          <Button>
-            <p className="text-base font-normal leading-normal">Sort</p>
-            <ArrowUpDownIcon size={16} className="h-4 w-4" />
-          </Button>
+          <SortDropdownMenu />
 
           <IconButton>
             <DownloadIcon size={16} className="h-4 w-4" />
@@ -118,5 +123,25 @@ function TableRow({
         {fees}
       </p>
     </div>
+  );
+}
+
+function SortDropdownMenu() {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button>
+          <p className="text-base font-normal leading-normal">Sort</p>
+          <ArrowUpDownIcon size={16} className="h-4 w-4" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="bg-white">
+        <DropdownMenuLabel>Sort By</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>Order Date</DropdownMenuItem>
+        <DropdownMenuItem>Order Amount</DropdownMenuItem>
+        <DropdownMenuItem>Transaction Fees</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }

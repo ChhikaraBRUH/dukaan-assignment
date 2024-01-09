@@ -1,4 +1,12 @@
 import { icons, sidebarIcons } from "@/components/icons";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/DropdownMenu";
 import cn from "@/utils/cn";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
@@ -58,7 +66,7 @@ function StoreName() {
         </div>
       </div>
 
-      <ChevronDown size={20} className="h-5 w-5 text-white" />
+      <SortDropdownMenu />
     </div>
   );
 }
@@ -105,6 +113,23 @@ function AvailableCredits() {
         </p>
       </div>
     </div>
+  );
+}
+
+function SortDropdownMenu() {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger>
+        <ChevronDown size={20} className="h-5 w-5 text-white" />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="bg-white">
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>Profile</DropdownMenuItem>
+        <DropdownMenuItem>Settings</DropdownMenuItem>
+        <DropdownMenuItem>Log out</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
 
