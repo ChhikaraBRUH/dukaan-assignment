@@ -1,14 +1,20 @@
 import { icons } from "@/components/icons";
 import { HelpCircleIcon, SearchIcon } from "lucide-react";
 
+import MobileMenu from "../sidebar/MobileMenu";
+
 export default function Header() {
   return (
-    <header className="sticky top-0 grid w-full grid-cols-3 gap-4 border-b border-b-[#D9D9D9] bg-white px-8 py-3">
-      <HeaderTitle />
+    <header className="sticky top-0 flex flex-row items-center gap-4 border-b border-b-[#D9D9D9] bg-white px-8 py-3">
+      <MobileMenu />
 
-      <SearchBox />
+      <div className="grid w-full grid-cols-3 gap-4">
+        <HeaderTitle />
 
-      <ActionButtons />
+        <SearchBox />
+
+        <ActionButtons />
+      </div>
     </header>
   );
 }

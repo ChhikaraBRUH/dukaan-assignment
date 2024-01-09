@@ -6,8 +6,16 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <aside className="fixed flex h-[100vh] w-[224px] shrink-0 flex-col items-center justify-between gap-6 overflow-auto bg-[#1E2640] px-2 py-4">
-      <div className="flex w-full flex-col gap-6">
+    <aside className="fixed flex h-[100vh] w-[224px] shrink-0 flex-col items-center justify-between overflow-y-auto bg-[#1E2640] px-2 py-4">
+      <SidebarContent />
+    </aside>
+  );
+}
+
+export function SidebarContent() {
+  return (
+    <>
+      <div className="flex w-full flex-col gap-6 pb-6">
         <StoreName />
 
         <div className="flex w-full flex-col gap-1">
@@ -20,7 +28,7 @@ export default function Sidebar() {
       <div className="w-full px-2">
         <AvailableCredits />
       </div>
-    </aside>
+    </>
   );
 }
 
