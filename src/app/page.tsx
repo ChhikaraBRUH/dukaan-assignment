@@ -5,8 +5,10 @@ import Transactions from "@/components/transactions";
 
 export default function Home() {
   return (
-    <div className="flex flex-row">
-      <Sidebar />
+    <div className="grid grid-cols-[224px_1fr]">
+      <div className="col-span-1">
+        <Sidebar />
+      </div>
 
       <div className="flex w-full flex-1 flex-col gap-8 bg-[#fafafa] pb-8">
         <Header />

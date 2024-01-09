@@ -3,7 +3,7 @@ import { HelpCircleIcon, SearchIcon } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="grid w-full grid-cols-3 gap-4 border-b border-b-[#D9D9D9] bg-white px-8 py-3">
+    <header className="grid w-full grid-cols-3 gap-4 border-b border-b-[#D9D9D9] bg-white px-8 py-3 sticky top-0">
       <HeaderTitle />
 
       <SearchBox />

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <aside className="flex h-[100vh] w-[224px] shrink-0 flex-col items-center justify-between gap-6 overflow-auto bg-[#1E2640] px-2 py-4">
+    <aside className="fixed flex h-[100vh] w-[224px] shrink-0 flex-col items-center justify-between gap-6 overflow-auto bg-[#1E2640] px-2 py-4">
       <div className="flex w-full flex-col gap-6">
         <StoreName />
 
