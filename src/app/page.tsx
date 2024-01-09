@@ -1,3 +1,4 @@
+import Header from "@/components/header";
 import Sidebar from "@/components/sidebar";
 
 export default function Home() {
@@ -5,7 +6,9 @@ export default function Home() {
     <div className="flex flex-row">
       <Sidebar />
 
-      <h1>HOMEPAGE</h1>
+      <div className="flex flex-1 flex-col gap-8">
+        <Header />
+      </div>
     </div>
   );
 }
