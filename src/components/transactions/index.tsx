@@ -1,4 +1,5 @@
 import { icons } from "@/components/icons";
+import Pagination from "@/components/transactions/Pagination";
 import Button, { IconButton } from "@/components/ui/Button";
 import { ArrowUpDownIcon, DownloadIcon, SearchIcon } from "lucide-react";
 
@@ -51,12 +52,14 @@ function TableContainer() {
         </div>
       </div>
 
-      <div className="flex w-full flex-col">
+      <div className="flex w-full flex-col pb-3">
         <TableHeader />
         {tableData.map((data) => (
           <TableRow key={data.id} {...data} />
         ))}
       </div>
+
+      <Pagination />
     </div>
   );
 }
