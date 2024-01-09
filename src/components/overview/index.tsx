@@ -1,3 +1,4 @@
+import Button from "@/components/ui/Button";
 import { ChevronDownIcon } from "lucide-react";
 
 export default function Overview() {
@@ -6,11 +7,11 @@ export default function Overview() {
       <div className="flex w-full flex-row items-center justify-between">
         <p className="text-xl font-medium leading-7 text-[#1A181E]">Overview</p>
 
-        <button className="flex flex-row items-center gap-[7px] rounded border border-[#D9D9D9] bg-white px-3.5 py-1.5 text-[#4D4D4D]">
+        <Button>
           <p className="text-base font-normal leading-normal">Last Month</p>
 
           <ChevronDownIcon size={16} className="h-4 w-4" />
-        </button>
+        </Button>
       </div>
 
       <div className="flex w-full flex-row items-center justify-between gap-8">

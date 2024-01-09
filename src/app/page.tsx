@@ -1,17 +1,20 @@
 import Header from "@/components/header";
 import Overview from "@/components/overview";
 import Sidebar from "@/components/sidebar";
+import Transactions from "@/components/transactions";
 
 export default function Home() {
   return (
     <div className="flex flex-row">
       <Sidebar />
 
-      <div className="flex w-full flex-1 flex-col gap-8 bg-[#fafafa]">
+      <div className="flex w-full flex-1 flex-col gap-8 bg-[#fafafa] pb-8">
         <Header />
 
         <div className="flex w-full flex-col gap-8 px-8">
           <Overview />
+
+          <Transactions />
         </div>
       </div>
     </div>
