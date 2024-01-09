@@ -3,7 +3,7 @@ import { HelpCircleIcon, SearchIcon } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="grid w-full grid-cols-3 gap-4 border-b border-b-[#D9D9D9] bg-white px-8 py-3 sticky top-0">
+    <header className="sticky top-0 grid w-full grid-cols-3 gap-4 border-b border-b-[#D9D9D9] bg-white px-8 py-3">
       <HeaderTitle />
 
       <SearchBox />
@@ -20,7 +20,7 @@ function HeaderTitle() {
         Payments
       </p>
 
-      <div className="flex flex-row items-center gap-1.5">
+      <div className="hidden flex-row items-center gap-1.5 md:flex">
         <HelpCircleIcon size={14} className="h-3.5 w-3.5 text-[#4D4D4D]" />
 
         <p className="text-xs font-normal leading-none text-[#4D4D4D]">

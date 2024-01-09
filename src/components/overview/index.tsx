@@ -14,7 +14,7 @@ export default function Overview() {
         </Button>
       </div>
 
-      <div className="flex w-full flex-row items-center justify-between gap-8">
+      <div className="flex w-full flex-col md:flex-row items-center justify-between gap-4 md:gap-8">
         {STATS.map((stat) => (
           <StatsCard key={stat.title} title={stat.title} value={stat.value} />
         ))}

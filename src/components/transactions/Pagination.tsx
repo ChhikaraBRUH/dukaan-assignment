@@ -5,20 +5,26 @@ import Button from "../ui/Button";
 
 export default function Pagination() {
   return (
-    <div className="flex flex-row items-center justify-center gap-6 text-sm font-medium leading-tight text-[#4D4D4D]">
+    <div className="flex flex-row items-center justify-center gap-2 text-xs font-medium leading-tight text-[#4D4D4D] md:gap-6 md:text-sm">
       <Button>
         <ChevronLeftIcon size={18} className="h-[18px] w-[18px]" />
         <p className="">Previous</p>
       </Button>
 
-      <div className="flex flex-row items-center justify-center gap-2">
+      <div className="flex flex-row items-center justify-center gap-1 md:gap-2">
         <PageButton pageNum={1} />
         <PageButton pageNum={"..."} />
         <PageButton pageNum={10} active />
 
-        {Array.from({ length: 8 }, (_, i) => i + 11).map((pageNum) => (
-          <PageButton key={pageNum} pageNum={pageNum} />
-        ))}
+        <div className="hidden flex-row items-center justify-center gap-2 md:flex">
+          {Array.from({ length: 8 }, (_, i) => i + 11).map((pageNum) => (
+            <PageButton key={pageNum} pageNum={pageNum} />
+          ))}
+        </div>
+
+        <div className="block md:hidden">
+          <PageButton pageNum={11} />
+        </div>
       </div>
 
       <Button>

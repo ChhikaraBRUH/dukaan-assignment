@@ -36,7 +36,7 @@ function TableContainer() {
       style={{ boxShadow: "0px 2px 6px 0px rgba(26, 24, 30, 0.04)" }}
     >
       <div className="flex w-full flex-row items-center justify-between">
-        <div className="w-1/5">
+        <div className="w-2/5 md:w-1/5">
           <SearchBox />
         </div>
 
@@ -52,7 +52,7 @@ function TableContainer() {
         </div>
       </div>
 
-      <div className="flex w-full flex-col pb-3">
+      <div className="flex w-full flex-col overflow-x-auto pb-3">
         <TableHeader />
         {tableData.map((data) => (
           <TableRow key={data.id} {...data} />
@@ -79,13 +79,15 @@ function SearchBox() {
 
 function TableHeader() {
   return (
-    <div className="grid w-full grid-cols-4 gap-10 rounded bg-[#F2F2F2] px-3 py-2.5 text-sm font-medium leading-tight text-[#4D4D4D]">
-      <p>Order ID</p>
-      <p className="flex flex-row items-center justify-start gap-1">
+    <div className="grid w-full grid-cols-4 gap-4 overflow-x-auto rounded bg-[#F2F2F2] px-3 py-2.5 text-sm font-medium leading-tight text-[#4D4D4D] md:gap-10">
+      <p className="min-w-[50%] md:min-w-max">Order ID</p>
+      <p className="flex min-w-[50%] flex-row items-center justify-start gap-1 md:min-w-max">
         Order date <icons.FilledChevronDown />
       </p>
-      <p className="flex flex-row justify-end">Order amount</p>
-      <p className="flex flex-row items-center justify-end gap-1">
+      <p className="flex min-w-[50%] flex-row justify-end md:min-w-max">
+        Order amount
+      </p>
+      <p className="flex min-w-[50%] flex-row items-center justify-end gap-1 md:min-w-max">
         Transaction fees <icons.InfoCircle />
       </p>
     </div>
@@ -104,11 +106,17 @@ function TableRow({
   fees: string;
 }) {
   return (
-    <div className="grid w-full grid-cols-4 gap-10 border-b border-b-[#E6E6E6] px-3 py-3.5 text-sm font-normal leading-tight text-[#1A181E] hover:bg-[#F1F5F9]">
-      <p className="font-medium text-[#146EB4]">{id}</p>
-      <p>{date}</p>
-      <p className="flex flex-row justify-end">{amount}</p>
-      <p className="flex flex-row justify-end">{fees}</p>
+    <div className="grid w-full grid-cols-4 gap-4 overflow-x-auto border-b border-b-[#E6E6E6] px-3 py-3.5 text-sm font-normal leading-tight text-[#1A181E] hover:bg-[#F1F5F9] md:gap-10">
+      <p className="min-w-[50%] font-medium text-[#146EB4] md:min-w-max">
+        {id}
+      </p>
+      <p className="min-w-[50%] md:min-w-max">{date}</p>
+      <p className="flex min-w-[50%] flex-row justify-end md:min-w-max">
+        {amount}
+      </p>
+      <p className="flex min-w-[50%] flex-row justify-end md:min-w-max">
+        {fees}
+      </p>
     </div>
   );
 }

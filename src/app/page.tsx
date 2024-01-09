@@ -5,8 +5,8 @@ import Transactions from "@/components/transactions";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-[224px_1fr]">
-      <div className="col-span-1">
+    <div className="flex w-full flex-col lg:grid lg:grid-cols-[224px_1fr]">
+      <div className="hidden lg:block lg:col-span-1">
         <Sidebar />
       </div>
 
