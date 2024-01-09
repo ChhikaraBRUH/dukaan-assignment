@@ -1,4 +1,10 @@
 import { icons } from "@/components/icons";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/Tooltip";
 import { HelpCircleIcon, SearchIcon } from "lucide-react";
 
 import MobileMenu from "./sidebar/MobileMenu";
@@ -26,13 +32,7 @@ function HeaderTitle() {
         Payments
       </p>
 
-      <div className="hidden flex-row items-center gap-1.5 md:flex">
-        <HelpCircleIcon size={14} className="h-3.5 w-3.5 text-[#4D4D4D]" />
-
-        <p className="text-xs font-normal leading-none text-[#4D4D4D]">
-          How it works
-        </p>
-      </div>
+      <HowItWorksTooltip />
     </div>
   );
 }
@@ -60,5 +60,28 @@ function ActionButtons() {
         <icons.Menu />
       </div>
     </div>
+  );
+}
+
+function HowItWorksTooltip() {
+  return (
+    <TooltipProvider>
+      <Tooltip delayDuration={100}>
+        <TooltipTrigger>
+          <div className="hidden flex-row items-center gap-1.5 md:flex">
+            <HelpCircleIcon size={14} className="h-3.5 w-3.5 text-[#4D4D4D]" />
+
+            <p className="text-xs font-normal leading-none text-[#4D4D4D]">
+              How it works
+            </p>
+          </div>
+        </TooltipTrigger>
+        <TooltipContent className="border bg-white">
+          <p className="text-xs font-normal leading-none text-[#4D4D4D]">
+            You can view our demo to know how it works!
+          </p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 }
