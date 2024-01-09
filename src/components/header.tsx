@@ -12,7 +12,9 @@ import MobileMenu from "./sidebar/MobileMenu";
 export default function Header() {
   return (
     <header className="sticky top-0 flex flex-row items-center gap-4 border-b border-b-[#D9D9D9] bg-white px-8 py-3">
-      <MobileMenu />
+      <div className="block lg:hidden">
+        <MobileMenu />
+      </div>
 
       <div className="grid w-full grid-cols-3 gap-4">
         <HeaderTitle />
